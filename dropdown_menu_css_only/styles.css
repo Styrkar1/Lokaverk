@@ -1,0 +1,296 @@
+/* horizontal navbar */
+
+nav>ul>li
+{
+display: inline-block;
+padding: 10px 20px;
+cursor: default;
+border: 1px solid;
+margin: 0 40px;
+width: 80px;
+}
+
+nav > ul
+{
+text-align: center;
+position: relative;
+margin: 0;
+padding: 0;
+}
+
+nav li>ul
+{
+text-align: left;
+height: 0;
+overflow: hidden;
+list-style: none;
+position: absolute;
+top: 41px;
+margin: 0;
+margin-left: -21px;
+padding: 0;
+transition: height 0.3s linear;
+z-index: 20;
+}
+
+nav li:hover>ul
+{
+height: 200px;
+}
+
+nav a
+{
+text-decoration: none;
+color: #999;
+display: block;
+padding: 10px 20px;
+border: 1px #999 solid;
+background: #ddd;
+width: 80px;
+}
+
+nav a:active
+{
+color: #000;
+}
+
+/* aside (vertical) navbar */
+
+aside
+{
+float: left;
+width: 200px;
+position: absolute;
+margin-left: 30px;
+}
+
+aside ul
+{
+list-style: none;
+margin: 0;
+padding: 0;
+}
+
+aside li > ul
+{
+height: 0;
+overflow: hidden;
+transition: height 0.3s;
+border-left: 1px solid black;
+border-right: 1px solid black;
+}
+
+aside li:nth-child(3) > ul
+{
+border-bottom: 1px solid black;
+}
+
+aside input
+{
+position: absolute;
+left: -9999px;
+}
+
+aside label
+{
+display: block;
+background: #2189ca;
+background: linear-gradient(#b8c2c8, #2189ca);
+padding: 10px;
+cursor: pointer;
+border: 1px solid #444;
+color: #fff;
+}
+
+aside label:active
+{
+background: linear-gradient(#2189ca, #b8c2c8);
+}
+
+aside li>input:checked + ul
+{
+height: 70px;
+}
+
+aside li>ul>li
+{
+padding: 2px 10px;
+}
+
+aside li>ul>li:hover
+{
+background: #aaa;
+}
+
+aside li>a
+{
+color: #888;
+text-decoration: none;
+display: block;
+}
+
+aside li>a:hover
+{
+color: black;
+}
+
+/*
+aside li:hover > ul
+{
+height: 70px;
+}
+*/
+
+/* navbar2 here below */
+
+.navbar2
+{
+margin-top: 200px;
+font-family: Bookman Old Style;
+}
+
+.navbar2 ul
+{
+margin: 0;
+padding: 0;
+list-style: none;
+}
+
+.navbar2>ul
+{
+text-align: center;
+position: relative;
+z-index: 40;
+}
+
+.navbar2>ul>li
+{
+display: inline-block;
+margin: 0 30px;
+background: white;
+padding: 10px 20px;
+cursor: default;
+}
+
+.navbar2>ul>li:hover
+{
+background: #2189ca;
+color: white;
+}
+
+.navbar2>ul>li>ul
+{
+position: absolute;
+z-index: 32;
+width: 400px;
+height: 200px;
+border: 1px solid black;
+box-shadow: 2px 2px 5px black;
+display: none;
+top: 40px;
+margin-left: -20px;
+background-color: white;
+}
+
+.navbar2>ul>li:hover > ul
+{
+display: block;
+}
+
+.navbar2 ul>ul
+{
+position: relative;
+float: left;
+height: 180px;
+width: 200px;
+margin: 10px 0;
+box-sizing: border-box;
+text-align: left;
+padding: 10px;
+}
+
+.navbar2 ul>ul:first-child
+{
+border-right: 1px solid #bbb;
+}
+
+.navbar2 ul>ul>li
+{
+padding: 10px 0;
+}
+
+.navbar2 ul>ul>li>a
+{
+color: #ddd;
+text-decoration: none;
+}
+
+.navbar2 ul>ul>li>a:hover
+{
+color: #2189ca;
+}
+
+/* navbar3 here below */
+
+.navbar3
+{
+float: left;
+}
+
+.navbar3 ul
+{
+list-style: none;
+margin: 0;
+padding: 0;
+width: 150px;
+position: relative;
+}
+
+.navbar3 input
+{
+position: absolute;
+left: -9999px;
+}
+
+.navbar3>ul label
+{
+display: block;
+background: #ddd;
+padding: 10px;
+margin: 20px;
+border: 1px solid black;
+border-top-left-radius: 5px;
+border-bottom-left-radius: 5px;
+border-right: none;
+cursor: pointer;
+position: relative;
+z-index: 31;
+}
+
+.navbar3>ul label:hover
+{
+color: #fff;;
+}
+
+.navbar3>ul>li .contentArea
+{
+position: fixed;
+width: 75%;
+height: 600px;
+display: none;
+top: 311px;
+left: 137px;
+background: #ddd;
+border: 1px solid;
+z-index: 30;
+}
+
+.navbar3 .contentArea h1
+{
+text-align: center;
+}
+
+.navbar3 input:checked + ul>.contentArea
+{
+display: block;
+}
